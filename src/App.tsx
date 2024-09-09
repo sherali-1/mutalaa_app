@@ -14,6 +14,3 @@ function App() {
 }
 
 export default App
-function reverseString(str:string) {
-  return [...str].reverse().join('');
-}
