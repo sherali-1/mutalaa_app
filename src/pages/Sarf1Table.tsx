@@ -32,7 +32,7 @@ export default function Sarf1Table (){
         {
         root: 'ضَرَبَ',
         meaning: 'ur',
-        form: ['فَعَلَ', 'يَفْعَلُ'],
+        form: ['فَعَلَ', 'يَفْعِلُ'],
         past: [
             [],
             ['urdi', 'urdi', 'urdilar', 'urdi (ayol)' ,'urdingiz (2 ayol)', 'urdilar(ayollar)', 'urding', 'urdingiz', 'urdingizlar', 'urding (ayol)', 'urdingiz (2 ayol)', 'urdingizlar (ayollar)', 'urdim', 'urdik']
@@ -45,7 +45,7 @@ export default function Sarf1Table (){
         {
         root: 'جَلَسَ',
         meaning: 'o\'tir',
-        form: ['فَعَلَ', 'يَفْعَلُ'],
+        form: ['فَعَلَ', 'يَفْعِلُ'],
         past: [
             [],
             ['o`tirdi', 'o`tirdi', 'o`tirdilar', 'o`tirdi (ayol)' ,'o`tirdingiz (2 ayol)', 'o`tirdilar(ayollar)', 'o`tirding', 'o`tirdingiz', 'o`tirdingizlar', 'o`tirding (ayol)', 'o`tirdingiz (2 ayol)', 'o`tirdingizlar (ayollar)', 'o`tirdim', 'o`tirdik']
@@ -55,9 +55,104 @@ export default function Sarf1Table (){
             ['o`tiryapti / o`tiradi', 'ikkisi o`tiryapti / o`tiradi','o`tiryaptilar / o`tiradilar','o`tiryapti / o`tiradi (ayol)','ikkisi o`tiryapti / o`tiradi (2 ayol)','o`tiryaptilar / o`tiradilar (ayollar)','o`tiryapsiz / o`tirasiz','ikkingiz o`tiryapsiz / o`tirasiz','o`tiryapsizlar / o`tirasizlar','o`tiryapsiz / o`tirasiz (ayol)','ikkingiz o`tiryapsiz / o`tirasiz (2 ayol)','o`tiryapsizlar / o`tirasizlar (ayollar)','o`tiryapman / o`tiraman','o`tiryapmiz / o`tiramiz'],
         ]
     },
+        {
+        root: 'حَذَفَ',
+        meaning: 'o\'chir',
+        form: ['فَعَلَ', 'يَفْعِلُ'],
+        past: [
+            [],
+            ['o`tirdi', 'o`tirdi', 'o`tirdilar', 'o`tirdi (ayol)' ,'o`tirdingiz (2 ayol)', 'o`tirdilar(ayollar)', 'o`tirding', 'o`tirdingiz', 'o`tirdingizlar', 'o`tirding (ayol)', 'o`tirdingiz (2 ayol)', 'o`tirdingizlar (ayollar)', 'o`tirdim', 'o`tirdik']
+        ],
+        present: [
+           [],
+            ['o`tiryapti / o`tiradi', 'ikkisi o`tiryapti / o`tiradi','o`tiryaptilar / o`tiradilar','o`tiryapti / o`tiradi (ayol)','ikkisi o`tiryapti / o`tiradi (2 ayol)','o`tiryaptilar / o`tiradilar (ayollar)','o`tiryapsiz / o`tirasiz','ikkingiz o`tiryapsiz / o`tirasiz','o`tiryapsizlar / o`tirasizlar','o`tiryapsiz / o`tirasiz (ayol)','ikkingiz o`tiryapsiz / o`tirasiz (2 ayol)','o`tiryapsizlar / o`tirasizlar (ayollar)','o`tiryapman / o`tiraman','o`tiryapmiz / o`tiramiz'],
+        ]
+    },
+    {
+    root: 'حَلَقَ',
+    meaning: 'soqolni ol',
+    form: ['فَعَلَ', 'يَفْعِلُ'],
+    past: [
+        [],
+        ['o`tirdi', 'o`tirdi', 'o`tirdilar', 'o`tirdi (ayol)' ,'o`tirdingiz (2 ayol)', 'o`tirdilar(ayollar)', 'o`tirding', 'o`tirdingiz', 'o`tirdingizlar', 'o`tirding (ayol)', 'o`tirdingiz (2 ayol)', 'o`tirdingizlar (ayollar)', 'o`tirdim', 'o`tirdik']
+    ],
+    present: [
+       [],
+        ['o`tiryapti / o`tiradi', 'ikkisi o`tiryapti / o`tiradi','o`tiryaptilar / o`tiradilar','o`tiryapti / o`tiradi (ayol)','ikkisi o`tiryapti / o`tiradi (2 ayol)','o`tiryaptilar / o`tiradilar (ayollar)','o`tiryapsiz / o`tirasiz','ikkingiz o`tiryapsiz / o`tirasiz','o`tiryapsizlar / o`tirasizlar','o`tiryapsiz / o`tirasiz (ayol)','ikkingiz o`tiryapsiz / o`tirasiz (2 ayol)','o`tiryapsizlar / o`tirasizlar (ayollar)','o`tiryapman / o`tiraman','o`tiryapmiz / o`tiramiz'],
+    ]
+},
+
+{
+    root: 'حَمَلَ',
+    meaning: 'ko\'tar',
+    form: ['فَعَلَ', 'يَفْعِلُ'],
+    past: [
+        [],
+        ['o`tirdi', 'o`tirdi', 'o`tirdilar', 'o`tirdi (ayol)' ,'o`tirdingiz (2 ayol)', 'o`tirdilar(ayollar)', 'o`tirding', 'o`tirdingiz', 'o`tirdingizlar', 'o`tirding (ayol)', 'o`tirdingiz (2 ayol)', 'o`tirdingizlar (ayollar)', 'o`tirdim', 'o`tirdik']
+    ],
+    present: [
+       [],
+        ['o`tiryapti / o`tiradi', 'ikkisi o`tiryapti / o`tiradi','o`tiryaptilar / o`tiradilar','o`tiryapti / o`tiradi (ayol)','ikkisi o`tiryapti / o`tiradi (2 ayol)','o`tiryaptilar / o`tiradilar (ayollar)','o`tiryapsiz / o`tirasiz','ikkingiz o`tiryapsiz / o`tirasiz','o`tiryapsizlar / o`tirasizlar','o`tiryapsiz / o`tirasiz (ayol)','ikkingiz o`tiryapsiz / o`tirasiz (2 ayol)','o`tiryapsizlar / o`tirasizlar (ayollar)','o`tiryapman / o`tiraman','o`tiryapmiz / o`tiramiz'],
+    ]
+},
+
+{
+    root: 'نَزَلَ',
+    meaning: 'tushir',
+    form: ['فَعَلَ', 'يَفْعِلُ'],
+    past: [
+        [],
+        ['o`tirdi', 'o`tirdi', 'o`tirdilar', 'o`tirdi (ayol)' ,'o`tirdingiz (2 ayol)', 'o`tirdilar(ayollar)', 'o`tirding', 'o`tirdingiz', 'o`tirdingizlar', 'o`tirding (ayol)', 'o`tirdingiz (2 ayol)', 'o`tirdingizlar (ayollar)', 'o`tirdim', 'o`tirdik']
+    ],
+    present: [
+       [],
+        ['o`tiryapti / o`tiradi', 'ikkisi o`tiryapti / o`tiradi','o`tiryaptilar / o`tiradilar','o`tiryapti / o`tiradi (ayol)','ikkisi o`tiryapti / o`tiradi (2 ayol)','o`tiryaptilar / o`tiradilar (ayollar)','o`tiryapsiz / o`tirasiz','ikkingiz o`tiryapsiz / o`tirasiz','o`tiryapsizlar / o`tirasizlar','o`tiryapsiz / o`tirasiz (ayol)','ikkingiz o`tiryapsiz / o`tirasiz (2 ayol)','o`tiryapsizlar / o`tirasizlar (ayollar)','o`tiryapman / o`tiraman','o`tiryapmiz / o`tiramiz'],
+    ]
+},
+{
+    root: 'صَبَرَ',
+    meaning: 'sabr qil',
+    form: ['فَعَلَ', 'يَفْعِلُ'],
+    past: [
+        [],
+        ['o`tirdi', 'o`tirdi', 'o`tirdilar', 'o`tirdi (ayol)' ,'o`tirdingiz (2 ayol)', 'o`tirdilar(ayollar)', 'o`tirding', 'o`tirdingiz', 'o`tirdingizlar', 'o`tirding (ayol)', 'o`tirdingiz (2 ayol)', 'o`tirdingizlar (ayollar)', 'o`tirdim', 'o`tirdik']
+    ],
+    present: [
+       [],
+        ['o`tiryapti / o`tiradi', 'ikkisi o`tiryapti / o`tiradi','o`tiryaptilar / o`tiradilar','o`tiryapti / o`tiradi (ayol)','ikkisi o`tiryapti / o`tiradi (2 ayol)','o`tiryaptilar / o`tiradilar (ayollar)','o`tiryapsiz / o`tirasiz','ikkingiz o`tiryapsiz / o`tirasiz','o`tiryapsizlar / o`tirasizlar','o`tiryapsiz / o`tirasiz (ayol)','ikkingiz o`tiryapsiz / o`tirasiz (2 ayol)','o`tiryapsizlar / o`tirasizlar (ayollar)','o`tiryapman / o`tiraman','o`tiryapmiz / o`tiramiz'],
+    ]
+},
+{
+    root: 'رَجَعَ',
+    meaning: 'qayt',
+    form: ['فَعَلَ', 'يَفْعِلُ'],  
+    past: [
+        [],
+        ['o`tirdi', 'o`tirdi', 'o`tirdilar', 'o`tirdi (ayol)' ,'o`tirdingiz (2 ayol)', 'o`tirdilar(ayollar)', 'o`tirding', 'o`tirdingiz', 'o`tirdingizlar', 'o`tirding (ayol)', 'o`tirdingiz (2 ayol)', 'o`tirdingizlar (ayollar)', 'o`tirdim', 'o`tirdik']
+    ],
+    present: [
+       [],
+        ['o`tiryapti / o`tiradi', 'ikkisi o`tiryapti / o`tiradi','o`tiryaptilar / o`tiradilar','o`tiryapti / o`tiradi (ayol)','ikkisi o`tiryapti / o`tiradi (2 ayol)','o`tiryaptilar / o`tiradilar (ayollar)','o`tiryapsiz / o`tirasiz','ikkingiz o`tiryapsiz / o`tirasiz','o`tiryapsizlar / o`tirasizlar','o`tiryapsiz / o`tirasiz (ayol)','ikkingiz o`tiryapsiz / o`tirasiz (2 ayol)','o`tiryapsizlar / o`tirasizlar (ayollar)','o`tiryapman / o`tiraman','o`tiryapmiz / o`tiramiz'],
+    ]
+},
+{
+    root: 'سَرَقَ',
+    meaning: 'o\'g\'irla',
+    form: ['فَعَلَ', 'يَفْعِلُ'],
+    past: [
+        [],
+        ['o`tirdi', 'o`tirdi', 'o`tirdilar', 'o`tirdi (ayol)' ,'o`tirdingiz (2 ayol)', 'o`tirdilar(ayollar)', 'o`tirding', 'o`tirdingiz', 'o`tirdingizlar', 'o`tirding (ayol)', 'o`tirdingiz (2 ayol)', 'o`tirdingizlar (ayollar)', 'o`tirdim', 'o`tirdik']
+    ],
+    present: [
+       [],
+        ['o`tiryapti / o`tiradi', 'ikkisi o`tiryapti / o`tiradi','o`tiryaptilar / o`tiradilar','o`tiryapti / o`tiradi (ayol)','ikkisi o`tiryapti / o`tiradi (2 ayol)','o`tiryaptilar / o`tiradilar (ayollar)','o`tiryapsiz / o`tirasiz','ikkingiz o`tiryapsiz / o`tirasiz','o`tiryapsizlar / o`tirasizlar','o`tiryapsiz / o`tirasiz (ayol)','ikkingiz o`tiryapsiz / o`tirasiz (2 ayol)','o`tiryapsizlar / o`tirasizlar (ayollar)','o`tiryapman / o`tiraman','o`tiryapmiz / o`tiramiz'],
+    ]
+},
 ].map(verb=>{
     verb.past[0] = makePastConjugation(verb.root)
+    verb.past[1] = makePastConjugationMeaning(verb.meaning)
     verb.present[0] = makePresentConjugation(verb.root)
+    verb.present[1] = makePresentConjugationMeaning(verb.meaning)
 
     return verb;
 })
@@ -66,7 +161,7 @@ export default function Sarf1Table (){
         
         <div>
             {conjugation.map((item, index)=>(<VerbItemTable item={item} index={index+1}/>))}
-            {conjugation.map((item, index)=>(<VerbItem item={item} index={index+1}/>))}
+            {/* {conjugation.map((item, index)=>(<VerbItem item={item} index={index+1}/>))} */}
         </div>
         </>
     )
@@ -77,7 +172,7 @@ function VerbItemTable({item, index}: {item: IVerb, index: number}){
        <h3 className="my-1 text-green-600 arabic-text flex flex-col">
             <span className="align-middle"> 
             <span className="px-3 ml-2 rounded-full bg-green-600 text-white text-sm">{index}</span>
-            {item.root} - {item.meaning}  </span>
+            {item.root} - {item.meaning}moq  </span>
             <small className="text-3xl text-blue-600">({item.form.join(' - ')})</small>
             </h3>
 
@@ -104,19 +199,19 @@ function VerbItemTable({item, index}: {item: IVerb, index: number}){
         </thead>
         <tbody>
             {PRONOUNS[0].map((pn, ind)=>(<tr key={pn}    className="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                <th scope="row" className="px-5 py-3font-normal whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
                 {pn} - <span className="italic">{PRONOUNS[1][ind]}</span>
                 </th>
-                <td className="arabic-text px-6 py-4 font-medium text-gray-900">
+                <td className="arabic-text px-5 py-3font-medium text-gray-900">
                 {item.past[0][ind]}
                 </td>
-                <td className="px-6 py-4 italic bg-gray-50 dark:bg-gray-800">
+                <td className="px-5 py-3italic bg-gray-50 dark:bg-gray-800">
                 {item.past[1][ind]}
                 </td>
-                <td className="arabic-text px-6 py-4 font-medium text-gray-900">
+                <td className="arabic-text px-5 py-3font-medium text-gray-900">
                 {item.present[0][ind]}
                 </td>
-                <td className="px-6 py-4 italic bg-gray-50 dark:bg-gray-800">
+                <td className="px-5 py-3italic bg-gray-50 dark:bg-gray-800">
                 {item.present[1][ind]}
                 </td>
             </tr>))}
@@ -159,6 +254,19 @@ function makePastConjugation(rootVerb: string){
         result[2] = rootArr[2]
         result[4] = rootArr[4]
         return result.join('')
+    })
+}
+
+function makePastConjugationMeaning(meaning: string){
+   return  PAST_CONJUGATION[1].map(v=>{
+        const result = v.replace(/ur/g, meaning)
+        return result
+    })
+}
+function makePresentConjugationMeaning(meaning: string){
+   return  PRESENT_CONJUGATION[1].map(v=>{
+        const result = v.replace(/ur/g, meaning)
+        return result
     })
 }
 function makePresentConjugation(rootVerb: string){
