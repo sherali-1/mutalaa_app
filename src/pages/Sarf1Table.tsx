@@ -220,30 +220,30 @@ function VerbItemTable({item, index}: {item: IVerb, index: number}){
 </div>
     </div>)
 }
-function VerbItem({item, index}: {item: IVerb, index: number}){
-    return (<div className="">
-        <h3 className="my-1 text-green-600 arabic-text flex flex-col">
-            <span className="align-middle"> 
-            <span className="px-3 ml-2 rounded-full bg-green-600 text-white text-sm">{index}</span>
-            {item.root} - {item.meaning}  </span>
-            <small className="text-3xl text-blue-600">({item.form.join(' - ')})</small>
-            </h3>
-        <div className="flex flex-col gap-10">
-            <VerbTypes verbs={item.past}/>
-            <VerbTypes verbs={item.present} />
-        </div>
+// function VerbItem({item, index}: {item: IVerb, index: number}){
+//     return (<div className="">
+//         <h3 className="my-1 text-green-600 arabic-text flex flex-col">
+//             <span className="align-middle"> 
+//             <span className="px-3 ml-2 rounded-full bg-green-600 text-white text-sm">{index}</span>
+//             {item.root} - {item.meaning}  </span>
+//             <small className="text-3xl text-blue-600">({item.form.join(' - ')})</small>
+//             </h3>
+//         <div className="flex flex-col gap-10">
+//             <VerbTypes verbs={item.past}/>
+//             <VerbTypes verbs={item.present} />
+//         </div>
         
-    </div>)
-}
-function VerbTypes ({verbs} : {verbs: Array<string[]>}){
-    return ( <p className="my-1 flex flex-wrap gap-5">
-        {verbs[0].map((verb, ind)=>(<span className="flex flex-col items-center">
-        <span className="font-bold arabic-text">{verb}</span>
-        <span className="font-normal italic text-lg">{verbs[1][ind]}</span>
+//     </div>)
+// }
+// function VerbTypes ({verbs} : {verbs: Array<string[]>}){
+//     return ( <p className="my-1 flex flex-wrap gap-5">
+//         {verbs[0].map((verb, ind)=>(<span className="flex flex-col items-center">
+//         <span className="font-bold arabic-text">{verb}</span>
+//         <span className="font-normal italic text-lg">{verbs[1][ind]}</span>
     
-    </span>))}
-    </p>)
-}
+//     </span>))}
+//     </p>)
+// }
 
 
 function makePastConjugation(rootVerb: string){
