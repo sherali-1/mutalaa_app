@@ -112,13 +112,10 @@ export default function Sarf2Table() {
         return verb;
     })
     return (
-        <>
-
             <div>
                 {conjugation.map((item, index) => (<VerbItemTable item={item} index={index + 1}/>))}
                 {/* {conjugation.map((item, index)=>(<VerbItem item={item} index={index+1}/>))} */}
             </div>
-        </>
     )
 }
 
