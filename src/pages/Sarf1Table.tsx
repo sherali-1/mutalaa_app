@@ -1,15 +1,7 @@
-interface IVerb{
-    root: string
-    meaning: string
-    form: Array<string>
-    past: Array<string[]>
-    present: Array<string[]>
+import PastPresentTable from "../components/PastPresentTable"
+import VerbTitle from "../components/VerbTitle"
+import { IVerb } from "../types"
 
-}
-const PRONOUNS = [
-    ['هُوَ', 'هُمَا', 'هُمْ', 'هِيَ', 'هُمَا', 'هُنَّ', 'أَنْتَ', 'أَنْتُمَا', 'أَنْتُمْ', 'أَنْتِ', 'أَنْتُمَا', 'أَنْتُنَّ', 'أَنَا', 'نَحْنُ'],
-    ['u', 'u ikkisi', 'ular', 'u (ayol)', 'u ikkisi (ayol)', 'ular (ayollar)', 'siz / sen', 'siz ikkingiz', 'sizlar / senlar', 'siz / sen (ayol)', 'siz ikkingiz (ayol)', 'sizlar / senlar (ayollar)', 'men', 'biz'], 
-]
 const PAST_CONJUGATION = [
     ['ضَرَبَ', 'ضَرَبَا','ضَرَبُو','ضَرَبَتْ','ضَرَبَتَا','ضَرَبْنَ','ضَرَبْتَ','ضَرَبْتُمَا','ضَرَبْتُمْ','ضَرَبْتِ','ضَرَبْتُمَا','ضَرَبْتُنَّ','ضَرَبْتُ','ضَرَبْنَا'],
     ['urdi', 'urdi', 'urdilar', 'urdi (ayol)' ,'urdingiz (2 ayol)', 'urdilar(ayollar)', 'urding', 'urdingiz', 'urdingizlar', 'urding (ayol)', 'urdingiz (2 ayol)', 'urdingizlar (ayollar)', 'urdim', 'urdik']
@@ -168,56 +160,10 @@ export default function Sarf1Table (){
 }
 
 function VerbItemTable({item, index}: {item: IVerb, index: number}){
-    return (<div className="flex flex-col gap-3 mb-4 text-sm shadow-md ">
-       <h3 className="my-1 text-green-600 arabic-text flex flex-col">
-            <span className="align-middle"> 
-            <span className="px-3 ml-2 rounded-full bg-green-600 text-white text-sm">{index}</span>
-            {item.root} - {item.meaning}moq  </span>
-            <small className="text-3xl text-blue-600">({item.form.join(' - ')})</small>
-            </h3>
+    return (<div className="flex flex-col gap-3 mb-4 text-sm ">
+       <VerbTitle item={item} index={index}/>
 
-            <div className="relative overflow-x-auto sm:rounded-lg">
-    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
-            <tr>
-                <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                Olmosh
-                </th>
-                <th scope="col" className="px-6 py-3">
-                O'tgan zamon fe'l
-                </th>
-                <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                Ma'nosi
-                </th>
-                <th scope="col" className="px-6 py-3">
-                Hozirgi zamon fe'l
-                </th>
-                <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                Ma'nosi
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            {PRONOUNS[0].map((pn, ind)=>(<tr key={pn}    className="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" className="px-5 py-3font-normal whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                {pn} - <span className="italic">{PRONOUNS[1][ind]}</span>
-                </th>
-                <td className="arabic-text px-5 py-3font-medium text-gray-900">
-                {item.past[0][ind]}
-                </td>
-                <td className="px-5 py-3italic bg-gray-50 dark:bg-gray-800">
-                {item.past[1][ind]}
-                </td>
-                <td className="arabic-text px-5 py-3font-medium text-gray-900">
-                {item.present[0][ind]}
-                </td>
-                <td className="px-5 py-3italic bg-gray-50 dark:bg-gray-800">
-                {item.present[1][ind]}
-                </td>
-            </tr>))}
-        </tbody>
-    </table>
-</div>
+            <PastPresentTable item={item}/>
     </div>)
 }
 // function VerbItem({item, index}: {item: IVerb, index: number}){

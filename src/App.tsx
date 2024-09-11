@@ -1,16 +1,15 @@
-import Sarf1Table from "./pages/Sarf1Table";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 function App() {
   return (
-    <main >
-      <div>
-        <h2 className="text-4xl">
-          Fellarni tuslash
-        </h2>
-      </div>
-      <Sarf1Table/>
-    </main>
-  )
+    <div >
+      
+      <RouterProvider router={router} />
+      {/* <Sarf2Table />
+      <Sarf1Table /> */}
+    </div>
+  );
 }
 
 export default App
