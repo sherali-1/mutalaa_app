@@ -11,6 +11,7 @@ export default function Root() {
             <nav className="flex flex-row gap-5">
                 <NavLink to="/task/1">Vazifa 1</NavLink>
                 <NavLink to="/task/2">Vazifa 2</NavLink>
+                <NavLink to="/task/3">Vazifa 3</NavLink>
             </nav>
         </header>
         <Outlet/>

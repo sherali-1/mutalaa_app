@@ -1,11 +1,11 @@
 import clsx from "clsx";
 
 interface ISmallSarfTable {
-    items: Array<Array<string>>
+    items?: Array<Array<string>>
 }
 
 export default function SmallSarfTable({items}: ISmallSarfTable) {
-    return (<div className="relative drop-shadow-md border border-gray-300">
+    return items?.length && (<div className="relative drop-shadow-md border border-gray-300">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
             <tr>
@@ -36,5 +36,5 @@ export default function SmallSarfTable({items}: ISmallSarfTable) {
             </tr>))}
             </tbody>
         </table>
-    </div>)
+    </div>) || null
 }
