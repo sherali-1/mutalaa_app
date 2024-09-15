@@ -15,11 +15,12 @@ export default function PassivePastPresentTable ({item}: IPastPresentTable){
                     O'tgan zamon (ma'lum)
                     </th>
                     <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        Hozirgi zamon (ma'lum)
-                    </th>
-                    <th scope="col" className="px-6 py-3">
                         O'tgan zamon (majhul)
                     </th>
+                    <th scope="col" className="px-6 py-3 ">
+                        Hozirgi zamon (ma'lum)
+                    </th>
+
                     <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
                         Hozirgi zamon (majhul)
                     </th>
@@ -33,11 +34,11 @@ export default function PassivePastPresentTable ({item}: IPastPresentTable){
                     <td className="arabic-text px-5 py-3 font-medium text-gray-900">
                     {item.past?.[0][ind]}
                     </td>
-                    <td className="arabic-text px-5 py-3 bg-gray-50 dark:text-white dark:bg-gray-800">
-                    {item.present?.[0][ind]}
+                    <td className="arabic-text px-5 py-3  bg-gray-50 dark:text-white dark:bg-gray-800">
+                        {item.passive_past?.[0][ind]}
                     </td>
-                    <td className="arabic-text px-5 py-3italic  font-medium text-gray-900">
-                    {item.passive_past?.[0][ind]}
+                    <td className="arabic-text px-5 py-3   font-medium text-gray-900">
+                    {item.present?.[0][ind]}
                     </td>
                     <td className="arabic-text px-5 py-3 bg-gray-50 dark:text-white dark:bg-gray-800">
                     {item.passive_present?.[0][ind]}
