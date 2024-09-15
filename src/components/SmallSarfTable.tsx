@@ -19,7 +19,7 @@ export default function SmallSarfTable({items}: ISmallSarfTable) {
                     Masdar
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Ismi Foil
+                    Ismi Foil / Ismi Maf'ul
                 </th>
             </tr>
             </thead>
