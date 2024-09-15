@@ -59,7 +59,7 @@ export default function Sarf3Table() {
         },
         {
             root: 'أَلْعَنَ',
-            meaning: 'la`lantla',
+            meaning: 'la`natla',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
             small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
             past: [],
