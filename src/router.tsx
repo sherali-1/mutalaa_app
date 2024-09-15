@@ -3,6 +3,7 @@ import Root from "./Root";
 import Sarf1Table from "./pages/Sarf1Table";
 import Sarf2Table from "./pages/Sarf2Table";
 import Sarf3Table from "./pages/Sarf3Table.tsx";
+import VerbsIIITable from "./pages/VerbsIIITable.tsx";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         {
         path: '/task/3',
         element: <Sarf3Table/>
+      },
+        {
+        path: '/task/form_3',
+        element: <VerbsIIITable/>
       }
     ]
     },
