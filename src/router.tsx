@@ -1,11 +1,11 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import {createHashRouter, Navigate} from "react-router-dom";
 import Root from "./Root";
 import Sarf1Table from "./pages/Sarf1Table";
 import Sarf2Table from "./pages/Sarf2Table";
 import Sarf3Table from "./pages/Sarf3Table.tsx";
 import VerbsIIITable from "./pages/VerbsIIITable.tsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
       element: <Root/>,
       children: [
