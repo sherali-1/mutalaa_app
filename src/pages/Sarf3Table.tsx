@@ -21,7 +21,7 @@ export default function Sarf3Table() {
             root: 'أَخْبَرَ',
             meaning: 'xabar ber',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -29,7 +29,7 @@ export default function Sarf3Table() {
             root: 'أَنْزَلَ',
             meaning: 'tushir',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -37,7 +37,7 @@ export default function Sarf3Table() {
             root: 'أَفْسَدَ',
             meaning: 'buz',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -45,7 +45,7 @@ export default function Sarf3Table() {
             root: 'أَفْلَحَ',
             meaning: 'muvaffaqiyat qozon',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -53,7 +53,7 @@ export default function Sarf3Table() {
             root: 'أَسْبَغَ',
             meaning: 'tortiq qil, ber',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -61,7 +61,7 @@ export default function Sarf3Table() {
             root: 'أَلْعَنَ',
             meaning: 'la`natla',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -69,7 +69,7 @@ export default function Sarf3Table() {
             root: 'أَغْرَقَ',
             meaning: 'cho`ktir, botir',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -78,7 +78,7 @@ export default function Sarf3Table() {
             root: 'أَنْكَرَ',
             meaning: 'inkor qil, rad qil, ton',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -86,7 +86,7 @@ export default function Sarf3Table() {
             root: 'أَنْبأَ',
             meaning: 'bashorat qil',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -94,7 +94,7 @@ export default function Sarf3Table() {
             root: 'أَعْلَنَ',
             meaning: 'e\'lon qil',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -102,7 +102,7 @@ export default function Sarf3Table() {
             root: 'أَنْبَتَ',
             meaning: 'o\'stir, (urug\'ni) undir',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -110,7 +110,7 @@ export default function Sarf3Table() {
             root: 'أَنْفَقَ',
             meaning: 'xarajat qil, sarfla, sovur',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -118,7 +118,7 @@ export default function Sarf3Table() {
             root: 'أَعْرَضَ',
             meaning: 'yuz o\'gir, chetlash, teskari o\'giril',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -126,7 +126,7 @@ export default function Sarf3Table() {
             root: 'أَنْدَرَ',
             meaning: 'noyob bo`l',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -134,7 +134,7 @@ export default function Sarf3Table() {
             root: 'أَدْبَرَ',
             meaning: 'orqa o\'gir, o\'zini orqaga tort',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -142,7 +142,7 @@ export default function Sarf3Table() {
             root: 'أَقْبَلَ',
             meaning: 'olg\'a qadam bos, yaqinlash',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -150,7 +150,7 @@ export default function Sarf3Table() {
             root: 'أَعْلَمَ',
             meaning: 'xabardor qil, bildir',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -158,7 +158,7 @@ export default function Sarf3Table() {
             root: 'أَرْصَدَ',
             meaning: '(pul) ajrat, mablag\' tayinlamoq',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -166,7 +166,7 @@ export default function Sarf3Table() {
             root: 'أَجْدَلَ',
             meaning: 'bahslash',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -174,7 +174,7 @@ export default function Sarf3Table() {
             root: 'أَحْزَنَ',
             meaning: 'xafa qil, mahzun qil',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعالاً', 'مُفْعِلٌ'],
+            small_sarf: ['أَفْعَلَ', 'يُفْعِلُ', 'إِفْعَالاً', 'مُفْعِلٌ'],
             past: [],
             present: [],
         },
@@ -200,7 +200,7 @@ export default function Sarf3Table() {
             return prev === 'collapsed' ? 'expanded' : 'collapsed'
         })
     }
-    // @ts-ignore
+    
     return (
         <div>
             <button className="border border-gray-300 px-2 py-1 rounded-md text-lg" onClick={handleModeChange}>
@@ -270,10 +270,17 @@ function makeSmallSarf(rootVerb: IVerb) {
     const active_sarf = rootVerb.small_sarf?.map((v, ind) => {
         const result = v.split('')
 
-        if (ind % 2 === 0) result[0] = rootArr[0]
+        if (ind % 2 === 0 && ind === 2) result[0] = rootArr[0]
         result[2] = rootArr[2]
         result[4] = rootArr[4]
-        result[6] = rootArr[6]
+        
+        if(ind === 2){
+            // result[5] = rootArr[4]
+            result[7] = rootArr[6]
+        }else{        
+            result[4] = rootArr[4]
+            result[6] = rootArr[6]
+        }
         return result.join('')
     })
     if (active_sarf?.length) {
