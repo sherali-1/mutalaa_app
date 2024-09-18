@@ -1,9 +1,8 @@
-import VerbTitle from "../components/VerbTitle.tsx"
-import {IVerb} from "../types.ts"
-import SmallSarfTable from "../components/SmallSarfTable.tsx";
-import {useMemo, useState} from "react";
-import PassivePastPresentTable from "../components/PassivePastPresentTable.tsx";
-import {SARF_MODES} from "../constants.ts";
+import { useMemo, useState } from "react";
+import SmallSarf from "../components/SmallSarf.tsx";
+import VerbTitle from "../components/VerbTitle.tsx";
+import { SMALL_SARF_FORMS } from "../constants.ts";
+import { IVerb } from "../types.ts";
 
 const PAST_CONJUGATION = [
     ['أَفْعَلَ', 'أَفْعَلَا', 'أَفْعَلُوا', 'أَفْعَلَتْ', 'أَفْعَلَتَا', 'أَفْعَلْنَ', 'أَفْعَلْتَ', 'أَفْعَلْتُمَا', 'أَفْعَلْتُمْ', 'أَفْعَلْتِ', 'أَفْعَلْتُمَا', 'أَفْعَلْتُنَّ', 'أَفْعَلْتُ', 'أَفْعَلْنَا'],
@@ -17,45 +16,10 @@ export default function Sarf4Table() {
     const [mode, setMode] = useState('expanded')
     const conjugation: IVerb[] = ([
         {
-            root: 'أَخْبَرَ',
-            meaning: 'xabar ber',
+            root: 'أَخْرَجَ',
+            meaning: 'chiqar',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects: [
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects: SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
@@ -63,473 +27,80 @@ export default function Sarf4Table() {
             root: 'أَنْزَلَ',
             meaning: 'tushir',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَفْسَدَ',
-            meaning: 'buz',
+            root: 'أَغْلَقَ',
+            meaning: 'yopmoq',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَفْلَحَ',
-            meaning: 'muvaffaqiyat qozon',
+            root: 'أَكْرَمَ',
+            meaning: 'ikrom qil',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَسْبَغَ',
-            meaning: 'tortiq qil, ber',
+            root: 'أَشْرَكَ',
+            meaning: 'sherik qil',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَلْعَنَ',
-            meaning: 'la`natla',
+            root: 'أَبْدَلَ',
+            meaning: 'o\'zgartir',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَغْرَقَ',
-            meaning: 'cho`ktir, botir',
+            root: 'أَتْبَعَ',
+            meaning: 'ketidan yubor',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
 
         {
-            root: 'أَنْكَرَ',
-            meaning: 'inkor qil, rad qil, ton',
+            root: 'أَكْمَلَ',
+            meaning: 'to\'ldir, tugat, mukammal qil',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَنْبأَ',
-            meaning: 'bashorat qil',
+            root: 'أَبْصَرَ',
+            meaning: 'ko\'r, tushun',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَعْلَنَ',
-            meaning: 'e\'lon qil',
+            root: 'أَجْلَسَ',
+            meaning: 'ek, o\'stir, (ko\'chat) o\'tkaz',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَنْبَتَ',
-            meaning: 'o\'stir, (urug\'ni) undir',
+            root: 'أَخْضَرَ',
+            meaning: 'olib kel, yashil bo\'l',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَنْفَقَ',
-            meaning: 'xarajat qil, sarfla, sovur',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
@@ -537,346 +108,66 @@ export default function Sarf4Table() {
             root: 'أَعْرَضَ',
             meaning: 'yuz o\'gir, chetlash, teskari o\'giril',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَنْدَرَ',
-            meaning: 'noyob bo`l',
+            root: 'أَحَدَثَ',
+            meaning: 'ishlab chiqar, yarat, ixtiro qil',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَدْبَرَ',
-            meaning: 'orqa o\'gir, o\'zini orqaga tort',
+            root: 'أَحْرَقَ',
+            meaning: 'kuydir',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَقْبَلَ',
-            meaning: 'olg\'a qadam bos, yaqinlash',
+            root: 'أَفْهَمَ',
+            meaning: 'tushuntir, ma\'lum qil',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَعْلَمَ',
-            meaning: 'xabardor qil, bildir',
+            root: 'أَخْبَرَ',
+            meaning: 'xabar ber',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَرْصَدَ',
-            meaning: '(pul) ajrat, mablag\' tayinlamoq',
+            root: 'أَسْمَعَ',
+            meaning: 'eshittir, gapir, so\'zla, xabar ber',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَجْدَلَ',
-            meaning: 'bahslash',
+            root: 'أَفْلَحَ',
+            meaning: 'muvaffaqiyatga erish, muvaffaqiyat qozon, maqsadga yet, rohatlan',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَحْزَنَ',
-            meaning: 'xafa qil, mahzun qil',
+            root: 'أَدْرَكَ',
+            meaning: 'yetib bor, yetib kel, muvaffaq bo\'l',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:[
-                {
-                title: 'O\'tgan zamon fe\'l (ma\'lum)',
-                word: 'أَفْعَلَ'
-            }, {
-                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
-                    word: 'يُفْعِلُ'
-                }, {
-                    title: 'Masdar',
-                    word:'إِفْعَالاً'
-                }, {
-                    title: 'Ismi foil',
-                    word:'مُفْعِلٌ'
-                }, {
-                    title: 'O\'tgan zamon fe\'l (majhul)',
-                    word:'أُفْعِلَ'
-                },{
-                    title: 'Hozirgi zamon fe\'l (majhul)',
-                    word: 'يُفْعَلُ'
-                } , {
-                    title: 'Masdar',
-                    word: 'إِفْعَالاً'
-                }, {
-                    title: 'Ismi maf\'ul',
-                    word: 'مُفْعَلٌ'
-                }, {
-                    title: 'Alamru minhu',
-                    word: 'أَفْعِلْ'
-                }, {
-                    title: 'Vannahyu \'anhu',
-                    word: 'لا تُفْعِلْ'
-                }, {
-                        title: 'Vazzorfu minhu',
-                        word: 'مُفْعَلٌ'
-                    }
-                ],
+            small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
             present: [],
-        },
+        }
     ] as Array<IVerb>).map(verb => {
         verb.past.push(makePastConjugation(verb.root))
         verb.past.push(makePastConjugationMeaning(verb.meaning))
@@ -913,7 +204,7 @@ function VerbItemTable({item, index}: { item: IVerb, index: number }) {
     const small_sarf_objects = useMemo(() => makeSmallSarf(item), [item]);
     return (<div className="flex flex-col gap-3 mb-4 text-sm ">
         <VerbTitle item={item} index={index}/>
-        {small_sarf_objects?.length ? <SmallSarfTable
+        {small_sarf_objects?.length ? <SmallSarf
             items={[small_sarf_objects.slice(0,4), small_sarf_objects.slice(4,8), small_sarf_objects.slice(8, 12)]}
         />: null}
 

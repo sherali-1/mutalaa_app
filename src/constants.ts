@@ -9,3 +9,40 @@ export const SARF_MODES :Record<string, string> = {
     expanded: 'Batafsil sarflash',
     collapsed: 'Kichik sarflash',
 }
+
+export const SMALL_SARF_FORMS  = [
+    {
+    title: 'O\'tgan zamon fe\'l (ma\'lum)',
+    word: 'أَفْعَلَ'
+}, {
+        title: 'Hozirgi zamon fe\'l (ma\'lum)',
+        word: 'يُفْعِلُ'
+    }, {
+        title: 'Masdar',
+        word:'إِفْعَالاً'
+    }, {
+        title: 'Ismi foil',
+        word:'مُفْعِلٌ'
+    }, {
+        title: 'O\'tgan zamon fe\'l (majhul)',
+        word:'أُفْعِلَ'
+    },{
+        title: 'Hozirgi zamon fe\'l (majhul)',
+        word: 'يُفْعَلُ'
+    } , {
+        title: 'Masdar',
+        word: 'إِفْعَالاً'
+    }, {
+        title: 'Ismi maf\'ul',
+        word: 'مُفْعَلٌ'
+    }, {
+        title: 'Alamru minhu',
+        word: 'أَفْعِلْ'
+    }, {
+        title: 'Vannahyu \'anhu',
+        word: 'لا تُفْعِلْ'
+    }, {
+            title: 'Vazzorfu minhu',
+            word: 'مُفْعَلٌ'
+        }
+    ]

@@ -7,7 +7,7 @@ interface ISmallSarfTable {
 export default function SmallSarf({items}: ISmallSarfTable) {
     return items?.length && (<div className="relative drop-shadow-md border border-gray-300">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
+            {/* <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
             <tr>
                 <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
                     O'tgan zamon fe'l
@@ -22,7 +22,7 @@ export default function SmallSarf({items}: ISmallSarfTable) {
                     Ismi Foil / Ismi Maf'ul
                 </th>
             </tr>
-            </thead>
+            </thead> */}
             <tbody>
             {items.map((sarf, ind0) => (<tr key={ind0} className="border-b border-gray-200 dark:border-gray-700">
                 {sarf.map((verb, ind) => (
