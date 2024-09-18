@@ -112,8 +112,17 @@ export default function Sarf4Table() {
             present: [],
         },
         {
-            root: 'أَحَدَثَ',
+            root: 'أَحْدَثَ',
             meaning: 'ishlab chiqar, yarat, ixtiro qil',
+            form: ['يُفْعِلُ', 'أَفْعَلَ'],
+            small_sarf_objects:SMALL_SARF_FORMS,
+            past: [],
+            present: [],
+        },
+        
+        {
+            root: 'أَبْعَدَ',
+            meaning: 'uzoqlashtir',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
             small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
