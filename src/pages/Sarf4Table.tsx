@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import SmallSarf from "../components/SmallSarf.tsx";
 import VerbTitle from "../components/VerbTitle.tsx";
 import { SMALL_SARF_FORMS } from "../constants.ts";
@@ -13,7 +13,6 @@ const PRESENT_CONJUGATION = [
     ['qilyapti / qiladi', 'ikkisi qilyapti / qiladi', 'qilyaptilar / qiladilar', 'qilyapti / qiladi (ayol)', 'ikkisi qilyapti / qiladi (2 ayol)', 'qilyaptilar / qiladilar (ayollar)', 'qilyapsiz / qilasiz', 'ikkingiz qilyapsiz / qilasiz', 'qilyapsizlar / qilasizlar', 'qilyapsiz / qilasiz (ayol)', 'ikkingiz qilyapsiz / qilasiz (2 ayol)', 'qilyapsizlar / qilasizlar (ayollar)', 'qilyapman / qilaman', 'qilyapmiz / qilamiz'],
 ]
 export default function Sarf4Table() {
-    const [mode, setMode] = useState('expanded')
     const conjugation: IVerb[] = ([
         {
             root: 'أَخْرَجَ',
@@ -33,7 +32,7 @@ export default function Sarf4Table() {
         },
         {
             root: 'أَغْلَقَ',
-            meaning: 'yopmoq',
+            meaning: 'yop',
             form: ['يُفْعِلُ', 'أَفْعَلَ'],
             small_sarf_objects:SMALL_SARF_FORMS,
             past: [],
@@ -184,12 +183,6 @@ export default function Sarf4Table() {
 
         return verb;
     })
-
-    const handleModeChange = () => {
-        setMode(prev => {
-            return prev === 'collapsed' ? 'expanded' : 'collapsed'
-        })
-    }
     
     return (
         <div>

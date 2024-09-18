@@ -1,9 +1,5 @@
-import VerbTitle, { VerbTitle2 } from "../components/VerbTitle.tsx"
-import {IVerb} from "../types.ts"
-import SmallSarfTable from "../components/SmallSarfTable.tsx";
-import {useMemo, useState} from "react";
-import PassivePastPresentTable from "../components/PassivePastPresentTable.tsx";
-import {SARF_MODES} from "../constants.ts";
+import { VerbTitle2 } from "../components/VerbTitle.tsx";
+import { IVerb } from "../types.ts";
 
 const PAST_CONJUGATION = [
     ['أَفْعَلَ', 'أَفْعَلَا', 'أَفْعَلُوا', 'أَفْعَلَتْ', 'أَفْعَلَتَا', 'أَفْعَلْنَ', 'أَفْعَلْتَ', 'أَفْعَلْتُمَا', 'أَفْعَلْتُمْ', 'أَفْعَلْتِ', 'أَفْعَلْتُمَا', 'أَفْعَلْتُنَّ', 'أَفْعَلْتُ', 'أَفْعَلْنَا'],
@@ -14,7 +10,6 @@ const PRESENT_CONJUGATION = [
     ['qilyapti / qiladi', 'ikkisi qilyapti / qiladi', 'qilyaptilar / qiladilar', 'qilyapti / qiladi (ayol)', 'ikkisi qilyapti / qiladi (2 ayol)', 'qilyaptilar / qiladilar (ayollar)', 'qilyapsiz / qilasiz', 'ikkingiz qilyapsiz / qilasiz', 'qilyapsizlar / qilasizlar', 'qilyapsiz / qilasiz (ayol)', 'ikkingiz qilyapsiz / qilasiz (2 ayol)', 'qilyapsizlar / qilasizlar (ayollar)', 'qilyapman / qilaman', 'qilyapmiz / qilamiz'],
 ]
 export default function Dictionary() {
-    const [mode, setMode] = useState('collapsed')
     const conjugation: IVerb[] = ([
         {
             root: 'أَبْلَغَ',
@@ -364,12 +359,6 @@ export default function Dictionary() {
         return verb;
     })
 
-    const handleModeChange = () => {
-        setMode(prev => {
-            return prev === 'collapsed' ? 'expanded' : 'collapsed'
-        })
-    }
-    // @ts-ignore
     return (
         <div>
             <header className="flex flex-row justify-between">
@@ -382,15 +371,9 @@ export default function Dictionary() {
       </div>
       <input type="text" id="search-navbar" className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..."/>
     </div>
-    {/* <button className="border border-gray-300 px-2 py-1 rounded-md text-lg" onClick={handleModeChange}>
-                {SARF_MODES[mode === 'collapsed' ? 'expanded' : 'collapsed']}
-            </button> */}
         </header>
             <div className="flex flex-wrap justify-evenly gap-6 ">
-            {mode === 'collapsed' ?
-                conjugation.map((item, index) => (
-                    <CollapsedVerbItemTable item={item} index={index + 1}/>)) :
-                conjugation.map((item, index) =>
+                {conjugation.map((item, index) =>
                     (<VerbItem item={item} index={index + 1}/>))
             }
             </div>
@@ -404,11 +387,6 @@ function VerbItem({item, index}: { item: IVerb, index: number }) {
     </div>)
 }
 
-function CollapsedVerbItemTable({item, index}: { item: IVerb, index: number }) {
-    return (<div className="flex flex-wrap  gap-3 mb-4 text-sm ">
-        <VerbTitle2 item={item} index={index}/>
-    </div>)
-}
 
 // function VerbItem({item, index}: {item: IVerb, index: number}){
 //     return (<div className="">
@@ -435,40 +413,6 @@ function CollapsedVerbItemTable({item, index}: { item: IVerb, index: number }) {
 //     </p>)
 // }
 
-
-function makeSmallSarf(rootVerb: IVerb) {
-    const rootArr = rootVerb.root.split('')
-    const result: Array<Array<string>> = []
-    const active_sarf = rootVerb.small_sarf?.map((v, ind) => {
-        const result = v.split('')
-
-        if (ind % 2 === 0) result[0] = rootArr[0]
-        result[2] = rootArr[2]
-        result[4] = rootArr[4]
-        result[6] = rootArr[6]
-        return result.join('')
-    })
-    if (active_sarf?.length) {
-        result.push(active_sarf)
-    }
-
-    const passive_sarf = active_sarf?.map((v, ind) => {
-        const result = v.split('')
-        if (ind === 0) {
-            result[1] = 'ُ'
-            result[5] = 'ِ'
-        } else if (ind === 1) {
-            result[5] = 'َ'
-        } else if (ind === 3) {
-            result[5] = 'َ'
-        }
-        return result.join('')
-    })
-    if (passive_sarf?.length) {
-        result.push(passive_sarf)
-    }
-    return result
-}
 
 function makePastConjugation(rootVerb: string) {
     const rootArr = rootVerb.split('')
