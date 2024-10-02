@@ -61,24 +61,60 @@ export const SMALL_SARF_V_FORMS  = [
         word:'مُتَفَعِّلٌ'
     }, {
         title: 'O\'tgan zamon fe\'l (majhul)',
-        word:'أُفْعِلَ'
+        word:'تُفُعِّلَ'
     },{
         title: 'Hozirgi zamon fe\'l (majhul)',
-        word: 'يُفْعَلُ'
+        word: 'يُتَفَعَّلُ'
     } , {
         title: 'Masdar',
-        word: 'إِفْعَالاً'
+        word: 'تَفَعُّلًا'
     }, {
         title: 'Ismi maf\'ul',
-        word: 'مُفْعَلٌ'
+        word: 'مُتَفَعَّلٌ'
     }, {
-        title: 'Alamru minhu',
-        word: 'أَفْعِلْ'
+        title: 'Al amru minhu',
+        word: 'تَفَعَّلْ'
     }, {
-        title: 'Vannahyu \'anhu',
-        word: 'لا تُفْعِلْ'
+        title: 'Va nahyu \'anhu',
+        word: 'لا تَتَفَعَّلْ'
     }, {
-            title: 'Vazzorfu minhu',
-            word: 'مُفْعَلٌ'
+            title: 'Va zorfu minhu',
+            word: 'مُتَفَعَّلٌ'
+        }
+    ]
+export const SMALL_SARF_VI_FORMS  = [
+    {
+    title: 'O\'tgan zamon fe\'l (ma\'lum)',
+    word: 'تَفَاعَلَ'
+}, {
+        title: 'Hozirgi zamon fe\'l (ma\'lum)',
+        word: 'يَتَفَاعَلُ'
+    }, {
+        title: 'Masdar',
+        word:'تَفَاعُلًا'
+    }, {
+        title: 'Ismi foil',
+        word:'مُتَفَاعِلٌ'
+    }, {
+        title: 'O\'tgan zamon fe\'l (majhul)',
+        word:'تُفُوعِلَ'
+    },{
+        title: 'Hozirgi zamon fe\'l (majhul)',
+        word: 'يُتَفَاعَلُ'
+    } , {
+        title: 'Masdar',
+        word: 'تَفَاعُلًا'
+    }, {
+        title: 'Ismi maf\'ul',
+        word: 'مُتَفَاعَلٌ'
+    }, {
+        title: 'Al amru minhu',
+        word: 'تَفَاعَلْ'
+    }, {
+        title: 'Va nahyu \'anhu',
+        word: 'لا تَتَفَاعَلْ'
+    }, {
+            title: 'Va zorfu minhu',
+            word: 'مُتَفَاعَلٌ'
         }
     ]
