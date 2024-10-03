@@ -7,6 +7,7 @@ import VerbsIIITable from "./pages/VerbsIIITable.tsx";
 import Dictionary from "./pages/Dictionary.tsx";
 import Sarf4Table from "./pages/Sarf4Table.tsx";
 import Sarf8Table from "./pages/Sarf8Table.tsx";
+import Sarf9Table from "./pages/Sarf9Table.tsx";
 
 const router = createHashRouter([
     {
@@ -36,6 +37,14 @@ const router = createHashRouter([
         path: '/task/8',
         element: <Sarf8Table/>
       },
+        {
+        path: '/task/8',
+        element: <Sarf8Table/>
+      },
+      {
+      path: '/task/9',
+      element: <Sarf9Table/>
+    },
         {
         path: '/task/form_3',
         element: <VerbsIIITable/>

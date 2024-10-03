@@ -1,181 +1,111 @@
 import { useMemo } from "react";
 import SmallSarf from "../components/SmallSarf.tsx";
 import VerbTitle from "../components/VerbTitle.tsx";
-import { SMALL_SARF_IV_FORMS } from "../constants.ts";
+import {  SMALL_SARF_V_FORMS, SMALL_SARF_VI_FORMS, SMALL_SARF_VII_FORMS } from "../constants.ts";
 import { IVerb } from "../types.ts";
+import { isArabicDiacriticMark } from "../commonUtils.ts";
 
 const PAST_CONJUGATION = [
-    ['أَفْعَلَ', 'أَفْعَلَا', 'أَفْعَلُوا', 'أَفْعَلَتْ', 'أَفْعَلَتَا', 'أَفْعَلْنَ', 'أَفْعَلْتَ', 'أَفْعَلْتُمَا', 'أَفْعَلْتُمْ', 'أَفْعَلْتِ', 'أَفْعَلْتُمَا', 'أَفْعَلْتُنَّ', 'أَفْعَلْتُ', 'أَفْعَلْنَا'],
+    ['تَفَعَّلَ', 'تَفَعَّلَا', 'تَفَعَّلُوا', 'تَفَعَّلَتْ', 'تَفَعَّلَتَا', 'تَفَعَّلْنَ', 'تَفَعَّلْتَ', 'تَفَعَّلْتُمَا', 'تَفَعَّلْتُمْ', 'تَفَعَّلْتِ', 'تَفَعَّلْتُمَا', 'تَفَعَّلْتُنَّ', 'تَفَعَّلْتُ', 'تَفَعَّلْنَا'],
     ['qildi', 'qildi', 'qildilar', 'qildi (ayol)', 'qildingiz (2 ayol)', 'qildilar(ayollar)', 'qilding', 'qildingiz', 'qildingizlar', 'qilding (ayol)', 'qildingiz (2 ayol)', 'qildingizlar (ayollar)', 'qildim', 'qildik']
 ]
 const PRESENT_CONJUGATION = [
-    ['يُفْعِلُ', 'يُفْعِلَانِ', 'يُفْعِلُونَ', 'تُفْعِلُ', 'تُفْعِلَانِ', 'يُفْعِلْنَ', 'تُفْعِلُ', 'تُفْعِلَانِ', 'تُفْعِلُونَ', 'تُفْعِلِينَ', 'تُفْعِلَانِ', 'تُفْعِلْنَ', 'أُفْعِلُ', 'نُفْعِلُ'],
+    ['يَتَفَعَّلُ', 'يَتَفَعَّلَانِ', 'يَتَفَعَّلُونَ', 'تَتَفَعَّلُ', 'تَتَفَعَّلَانِ', 'يَتَفَعَّلْنَ', 'تَتَفَعَّلُ', 'تَتَفَعَّلَانِ', 'تَتَفَعَّلُونَ', 'تَتَفَعَّلِينَ', 'تَتَفَعَّلَانِ', 'تَتَفَعَّلْنَ', 'أَتَفَعَّلُ', 'نَتَفَعَّلُ'],
     ['qilyapti / qiladi', 'ikkisi qilyapti / qiladi', 'qilyaptilar / qiladilar', 'qilyapti / qiladi (ayol)', 'ikkisi qilyapti / qiladi (2 ayol)', 'qilyaptilar / qiladilar (ayollar)', 'qilyapsiz / qilasiz', 'ikkingiz qilyapsiz / qilasiz', 'qilyapsizlar / qilasizlar', 'qilyapsiz / qilasiz (ayol)', 'ikkingiz qilyapsiz / qilasiz (2 ayol)', 'qilyapsizlar / qilasizlar (ayollar)', 'qilyapman / qilaman', 'qilyapmiz / qilamiz'],
 ]
-export default function Sarf4Table() {
+export default function Sarf9Table() {
     const conjugation: IVerb[] = ([
         {
-            root: 'أَخْرَجَ',
-            meaning: 'chiqar',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects: SMALL_SARF_IV_FORMS,
+            root: 'اِنْفَرَدَ',
+            meaning: 'yakka bo\'l, tanho bo\'l, ajralib qol',
+            form: ['يَتَفَعَّلُ', 'تَفَعَّلَ'],
+            small_sarf_objects: SMALL_SARF_VII_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَنْزَلَ',
+            root: 'تَكَلَّمَ',
             meaning: 'tushir',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            form: ['يَتَفَعَّلُ', 'تَفَعَّلَ'],
+            small_sarf_objects: SMALL_SARF_V_FORMS,
             past: [],
             present: [],
-        },
+            },
+            {
+                root: 'تَوَضَّأَ',
+                meaning: 'tahorat ol',
+                form: ['يَتَفَعَّلُ', 'تَفَعَّلَ'],
+                small_sarf_objects: SMALL_SARF_V_FORMS,
+                past: [],
+                present: [],
+            },
         {
-            root: 'أَغْلَقَ',
-            meaning: 'yop',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَكْرَمَ',
+            root: 'تَفَكَّرَ',
             meaning: 'ikrom qil',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            form: ['يَتَفَعَّلُ', 'تَفَعَّلَ'],
+            small_sarf_objects: SMALL_SARF_V_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَشْرَكَ',
-            meaning: 'sherik qil',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            root: 'تَفَرَّقَ',
+            meaning: 'ikrom qil',
+            form: ['يَتَفَعَّلُ', 'تَفَعَّلَ'],
+            small_sarf_objects: SMALL_SARF_V_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَبْدَلَ',
-            meaning: 'o\'zgartir',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَتْبَعَ',
-            meaning: 'ketidan yubor',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            root: 'تَذَكَّرَ',
+            meaning: 'ikrom qil',
+            form: ['يَتَفَعَّلُ', 'تَفَعَّلَ'],
+            small_sarf_objects: SMALL_SARF_V_FORMS,
             past: [],
             present: [],
         },
 
+
+
         {
-            root: 'أَكْمَلَ',
-            meaning: 'to\'ldir, tugat, mukammal qil',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            root: 'تَحَادَثَ',
+            meaning: 'sherik qil',
+            form: [SMALL_SARF_VI_FORMS[1].word, SMALL_SARF_VI_FORMS[0].word],
+            small_sarf_objects: SMALL_SARF_VI_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَبْصَرَ',
-            meaning: 'ko\'r, tushun',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            root: 'تَنَاقَشَ',
+            meaning: 'sherik qil',
+            form: [SMALL_SARF_VI_FORMS[1].word, SMALL_SARF_VI_FORMS[0].word],
+            small_sarf_objects: SMALL_SARF_VI_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَجْلَسَ',
-            meaning: 'ek, o\'stir, (ko\'chat) o\'tkaz',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            root: 'تَشَابَهَ',
+            meaning: 'sherik qil',
+            form: [SMALL_SARF_VI_FORMS[1].word, SMALL_SARF_VI_FORMS[0].word],
+            small_sarf_objects: SMALL_SARF_VI_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَخْضَرَ',
-            meaning: 'olib kel, yashil bo\'l',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            root: 'تَعَارَفَ',
+            meaning: 'sherik qil',
+            form: [SMALL_SARF_VI_FORMS[1].word, SMALL_SARF_VI_FORMS[0].word],
+            small_sarf_objects: SMALL_SARF_VI_FORMS,
             past: [],
             present: [],
         },
         {
-            root: 'أَعْرَضَ',
-            meaning: 'yuz o\'gir, chetlash, teskari o\'giril',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
+            root: 'تَقَابَلَ',
+            meaning: 'sherik qil',
+            form: [SMALL_SARF_VI_FORMS[1].word, SMALL_SARF_VI_FORMS[0].word],
+            small_sarf_objects: SMALL_SARF_VI_FORMS,
             past: [],
             present: [],
         },
-        {
-            root: 'أَحْدَثَ',
-            meaning: 'ishlab chiqar, yarat, ixtiro qil',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        
-        {
-            root: 'أَبْعَدَ',
-            meaning: 'uzoqlashtir',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَحْرَقَ',
-            meaning: 'kuydir',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَفْهَمَ',
-            meaning: 'tushuntir, ma\'lum qil',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَخْبَرَ',
-            meaning: 'xabar ber',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَسْمَعَ',
-            meaning: 'eshittir, gapir, so\'zla, xabar ber',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَفْلَحَ',
-            meaning: 'muvaffaqiyatga erish, muvaffaqiyat qozon, maqsadga yet, rohatlan',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        },
-        {
-            root: 'أَدْرَكَ',
-            meaning: 'yetib bor, yetib kel, muvaffaq bo\'l',
-            form: ['يُفْعِلُ', 'أَفْعَلَ'],
-            small_sarf_objects:SMALL_SARF_IV_FORMS,
-            past: [],
-            present: [],
-        }
     ] as Array<IVerb>).map(verb => {
         verb.past.push(makePastConjugation(verb.root))
         verb.past.push(makePastConjugationMeaning(verb.meaning))
@@ -240,25 +170,40 @@ function VerbItemTable({item, index}: { item: IVerb, index: number }) {
 
 
 function makeSmallSarf(rootVerb: IVerb) {
-    const rootArr = rootVerb.root.split('')
+    const rootArr = rootVerb.root.split('').filter(w=>!isArabicDiacriticMark(w))
     const active_sarf = rootVerb.small_sarf_objects?.map((obj) => {
-        const result = obj.word.split('')
+        let ind = 0
+        const _result = obj.word.split('').map((w, perInd)=>{
+            let startIndex = 0
+            
+            if(obj.title.includes('foil') ||obj.title.includes('maf\'ul') 
+                ||obj.title.includes('zorf') || obj.title.includes('ozirgi')){
+                startIndex = 1
+            }else if (obj.title.includes('nahyu')){
+                startIndex = 5
+            }
 
-        if(obj.word === 'إِفْعَالاً'){
-            result[2] = rootArr[2]
-        result[4] = rootArr[4]
-            result[7] = rootArr[6]
-        }else if(obj.word === 'لا تُفْعِلْ'){
-            result[5] = rootArr[2]
-            result[7] = rootArr[4]
-            result[9] = rootArr[6]
-        }else{     
-            result[2] = rootArr[2]
-        result[4] = rootArr[4]   
-            result[4] = rootArr[4]
-            result[6] = rootArr[6]
-        }
-        return result.join('')
+            if(!isArabicDiacriticMark(w) && perInd >= startIndex ){
+                return rootArr[ind++] || w
+            }
+            return w;
+        })
+        // console.log('make Small sarf --- ', result, rootArr, result.map(ch=>ch.charCodeAt(0)))
+        // if(obj.word === 'إِفْعَالاً'){
+        //     result[2] = rootArr[2]
+        //     result[4] = rootArr[4]
+        //     result[7] = rootArr[6]
+        // }else if(obj.word === 'لا تَتَفَعَّلْ'){
+        //     result[5] = rootArr[2]
+        //     result[7] = rootArr[4]
+        //     result[9] = rootArr[6]
+        // }else{     
+        //     result[2] = rootArr[2]
+        //     result[4] = rootArr[4]   
+        //     result[6] = rootArr[6]
+        //     result[7] = rootArr[7]
+        // }
+        return _result.join('')
     })
     return active_sarf
 }
