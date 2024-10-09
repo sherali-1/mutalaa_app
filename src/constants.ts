@@ -1,4 +1,3 @@
-
 export const PRONOUNS = [
     ['هُوَ', 'هُمَا', 'هُمْ', 'هِيَ', 'هُمَا', 'هُنَّ', 'أَنْتَ', 'أَنْتُمَا', 'أَنْتُمْ', 'أَنْتِ', 'أَنْتُمَا', 'أَنْتُنَّ', 'أَنَا', 'نَحْنُ'],
     ['u', 'u ikkisi', 'ular', 'u (ayol)', 'u ikkisi (ayol)', 'ular (ayollar)', 'siz / sen', 'siz ikkingiz', 'sizlar / senlar', 'siz / sen (ayol)', 'siz ikkingiz (ayol)', 'sizlar / senlar (ayollar)', 'men', 'biz'],
@@ -10,6 +9,307 @@ export const SARF_MODES: Record<string, string> = {
     collapsed: 'Kichik sarflash',
 }
 
+export const SMALL_SARF_I_FORMS = [
+    {
+        code: 'Fa\'ala', title: 'فَعَلَ',
+        forms: [
+            [
+                {
+                    title: 'O\'tgan zamon fe\'l (ma\'lum)',
+                    word: 'فَعَلَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
+                    word: 'يَفْعِلُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَعْلًا'
+                },
+                {
+                    title: 'Ismi foil',
+                    word: 'فَاعِلٌ'
+                },
+                {
+                    title: 'O\'tgan zamon fe\'l (majhul)',
+                    word: 'فُعِلَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (majhul)',
+                    word: 'يُفْعَلُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَعْلًا'
+                },
+                {
+                    title: 'Ismi maf\'ul',
+                    word: 'مَفْعُولٌ'
+                },
+                {
+                    title: 'Alamru minhu',
+                    word: 'اِفْعِلْ'
+                },
+                {
+                    title: 'Vannahyu \'anhu',
+                    word: 'لا تَفْعِلْ'
+                },
+                {
+                    title: 'Va zorfu minhu',
+                    word: 'مَفْعَلٌ, مَفْعِلٌ, مَفْعَلَةٌ'
+                },
+                {
+                    title: 'Va alatun minhu',
+                    word: 'مِفْعَلٌ, مَفْعَلَةٌ, مِفْعَالٌ'
+                }
+            ],
+            [
+                {
+                    title: 'O\'tgan zamon fe\'l (ma\'lum)',
+                    word: 'فَتَحَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
+                    word: 'يَفْتَحُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَتْحًا'
+                },
+                {
+                    title: 'Ismi foil',
+                    word: 'فَاتِحٌ'
+                },
+                {
+                    title: 'O\'tgan zamon fe\'l (majhul)',
+                    word: 'فُتِحَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (majhul)',
+                    word: 'يُفْتَحُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَتْحًا'
+                },
+                {
+                    title: 'Ismi maf\'ul',
+                    word: 'مَفْتُوحٌ'
+                },
+                {
+                    title: 'Alamru minhu',
+                    word: 'اِفْتَحْ'
+                },
+                {
+                    title: 'Vannahyu \'anhu',
+                    word: 'لا تَفْتَحْ'
+                },
+                {
+                    title: 'Va zorfu minhu',
+                    word: 'مَفْتَحٌ, مَفْتِحٌ, مَفْتَحَةٌ'
+                },
+                {
+                    title: 'Va alatun minhu',
+                    word: 'مِفْتَحٌ, مَفْتَحَةٌ, مِفْتَاحٌ'
+                }
+            ],
+            [
+                {
+                    title: 'O\'tgan zamon fe\'l (ma\'lum)',
+                    word: 'نَصَعَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
+                    word: 'يَنْصُعُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'نَصْعًا'
+                },
+                {
+                    title: 'Ismi foil',
+                    word: 'نَاصِعٌ'
+                },
+                {
+                    title: 'O\'tgan zamon fe\'l (majhul)',
+                    word: 'نُصِعَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (majhul)',
+                    word: 'يُنْصَعُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'نَصْعًا'
+                },
+                {
+                    title: 'Ismi maf\'ul',
+                    word: 'مَنْصُوعٌ'
+                },
+                {
+                    title: 'Alamru minhu',
+                    word: 'اُنْصُعْ'
+                },
+                {
+                    title: 'Vannahyu \'anhu',
+                    word: 'لا تَنْصُعْ'
+                },
+                {
+                    title: 'Va zorfu minhu',
+                    word: 'مَنْصَعٌ, مَنْصِعٌ, مَنْصَعَةٌ'
+                },
+                {
+                    title: 'Va alatun minhu',
+                    word: 'مِنْصَعٌ, مَنْصَعَةٌ, مِنْصَاعٌ'
+                }
+            ],
+        ]
+    },
+    {
+        code: 'Faela', title: 'فَعِلَ',
+        forms: [
+            [
+                {
+                    title: 'O\'tgan zamon fe\'l (ma\'lum)',
+                    word: 'فَعِلَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
+                    word: 'يَفْعَلُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَعْلًا'
+                },
+                {
+                    title: 'Ismi foil',
+                    word: 'فَاعِلٌ'
+                },
+                {
+                    title: 'O\'tgan zamon fe\'l (majhul)',
+                    word: 'فُعِلَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (majhul)',
+                    word: 'يُفْعَلُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَعْلًا'
+                },
+                {
+                    title: 'Ismi maf\'ul',
+                    word: 'مَفْعُولٌ'
+                },
+                {
+                    title: 'Alamru minhu',
+                    word: 'اِفْعَلْ'
+                },
+                {
+                    title: 'Vannahyu \'anhu',
+                    word: 'لا تَفْعَلْ'
+                },
+                {
+                    title: 'Va zorfu minhu',
+                    word: 'مَفْعَلٌ, مَفْعِلٌ, مَفْعَلَةٌ'
+                },
+                {
+                    title: 'Va alatun minhu',
+                    word: 'مِفْعَلٌ, مَفْعَلَةٌ, مِفْعَالٌ'
+                }
+            ],
+            [
+                {
+                    title: 'O\'tgan zamon fe\'l (ma\'lum)',
+                    word: 'فَعِلَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
+                    word: 'يَفْعِلُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَعْلًا'
+                },
+                {
+                    title: 'Ismi foil',
+                    word: 'فَاعِلٌ'
+                },
+                {
+                    title: 'O\'tgan zamon fe\'l (majhul)',
+                    word: 'فُعِلَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (majhul)',
+                    word: 'يُفْعَلُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَعْلًا'
+                },
+                {
+                    title: 'Ismi maf\'ul',
+                    word: 'مَفْعُولٌ'
+                },
+                {
+                    title: 'Alamru minhu',
+                    word: 'اِفْعِلْ'
+                },
+                {
+                    title: 'Vannahyu \'anhu',
+                    word: 'لا عَفْعِلْ'
+                },
+                {
+                    title: 'Va zorfu minhu',
+                    word: 'مَفْعَلٌ, مَفْعِلٌ, مَفْعَلَةٌ'
+                },
+                {
+                    title: 'Va alatun minhu',
+                    word: 'مِفْعَلٌ, مَفْعَلَةٌ, مِفْعَالٌ'
+                }
+            ],
+        ]
+    },
+    {
+        code: 'Faula', title: 'فَعُلَ',
+        forms: [
+            [
+                {
+                    title: 'O\'tgan zamon fe\'l (ma\'lum)',
+                    word: 'فَعُلَ'
+                },
+                {
+                    title: 'Hozirgi zamon fe\'l (ma\'lum)',
+                    word: 'يَفْعُلُ'
+                },
+                {
+                    title: 'Masdar',
+                    word: 'فَعَلًا'
+                },
+                {
+                    title: 'Ismi foil',
+                    word: 'فَعِيلٌ'
+                },
+                {
+                    title: 'Alamru minhu',
+                    word: 'اُفْعُلْ'
+                },
+                {
+                    title: 'Vannahyu \'anhu',
+                    word: 'لا تَفْعُلْ'
+                },
+                {
+                    title: 'Va zorfu minhu',
+                    word: 'مَفْعَلٌ, مَفْعِلٌ, مَفْعَلَةٌ'
+                },
+                {
+                    title: 'Va alatun minhu',
+                    word: 'مِفْعَلٌ, مَفْعَلَةٌ, مِفْعَالٌ'
+                }
+            ],
+        ]
+    },
+]
 export const SMALL_SARF_II_FORMS = [
     {
         title: 'O\'tgan zamon fe\'l (ma\'lum)',
@@ -42,7 +342,7 @@ export const SMALL_SARF_II_FORMS = [
         title: 'Vannahyu \'anhu',
         word: 'لا تُفَعِّلْ'
     }, {
-        title: 'Vazzorfu minhu',
+        title: 'Va zorfu minhu',
         word: 'مُفَعَّلٌ'
     }
 ]
@@ -78,7 +378,7 @@ export const SMALL_SARF_III_FORMS = [
         title: 'Vannahyu \'anhu',
         word: 'لا تُفَاعِلْ'
     }, {
-        title: 'Vazzorfu minhu',
+        title: 'Va zorfu minhu',
         word: 'مُفَاعَلٌ'
     }
 ]
@@ -114,7 +414,7 @@ export const SMALL_SARF_IV_FORMS = [
         title: 'Vannahyu \'anhu',
         word: 'لا تُفْعِلْ'
     }, {
-        title: 'Vazzorfu minhu',
+        title: 'Va zorfu minhu',
         word: 'مُفْعَلٌ'
     }
 ]
