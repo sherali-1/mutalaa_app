@@ -58,7 +58,6 @@ export default function Sarf11Table() {
         },
 
 
-
         {
             root: 'قَرَأَ',
             meaning: 'o\'qi',
@@ -106,7 +105,6 @@ export default function Sarf11Table() {
         },
 
 
-
         {
             root: 'نَبَتَ',
             meaning: 'o\'s',
@@ -144,10 +142,6 @@ export default function Sarf11Table() {
         },
 
 
-
-
-
-
         //FAEYLA
 
         {
@@ -182,9 +176,6 @@ export default function Sarf11Table() {
         },
 
 
-
-
-
         {
             root: 'صَفِرَ',
             meaning: 'hushtak chal',
@@ -195,8 +186,6 @@ export default function Sarf11Table() {
             meaning: 'hushtak chal',
             small_sarf_objects: SMALL_SARF_I_FORMS[1].forms[1],
         },
-
-
 
 
         //FAUVLA
@@ -213,11 +202,11 @@ export default function Sarf11Table() {
 
 
     ] as Array<IVerb>)
-    
+
     return (
         <div>
             {conjugation.map((item, index) => (
-            <VerbItemTable item={item} index={index + 1}/>
+                <VerbItemTable item={item} index={index + 1}/>
             ))}
         </div>
     )
@@ -228,8 +217,8 @@ function VerbItemTable({item, index}: { item: IVerb, index: number }) {
     return (<div className="flex flex-col gap-3 mb-4 text-sm ">
         <VerbTitle item={item} index={index}/>
         {small_sarf_objects?.length ? <SmallSarf
-            items={[small_sarf_objects.slice(0,4), small_sarf_objects.slice(4,8), small_sarf_objects.slice(8, 12)]}
-        />: null}
+            items={[small_sarf_objects.slice(0, 4), small_sarf_objects.slice(4, 8), small_sarf_objects.slice(8, 12)]}
+        /> : null}
 
     </div>)
 }
@@ -261,24 +250,25 @@ function VerbItemTable({item, index}: { item: IVerb, index: number }) {
 
 
 function makeSmallSarf(rootVerb: IVerb) {
-    const rootArr = rootVerb.root.split('').filter(w=>!isArabicDiacriticMark(w))
+    const rootArr = rootVerb.root.split('').filter(w => !isArabicDiacriticMark(w))
     const active_sarf = rootVerb.small_sarf_objects?.map((obj) => {
         let ind = 0
-        const _result = (obj.word || '').split('').map((letter, perInd)=>{
+        const _result = (obj.word || '').split(',').map(word => word.split('').map((letter, perInd) => {
             let startIndex = 0
-            
-            if(obj.title.includes('maf\'ul')
-                ||obj.title.includes('zorf') || obj.title.includes('ozirgi')|| obj.title.includes('alat')){
+
+            if (obj.title.includes('maf\'ul')
+                ||obj.title.includes('amr')
+                || obj.title.includes('zorf') || obj.title.includes('ozirgi') || obj.title.includes('alat')) {
                 startIndex = 1
-            }else if (obj.title.includes('nahyu')){
+            } else if (obj.title.includes('nahyu')) {
                 startIndex = 5
             }
 
-            if(!isArabicDiacriticMark(letter) && perInd >= startIndex ){
+            if (!isArabicDiacriticMark(letter) && perInd >= startIndex) {
                 return rootArr[ind++] || letter
             }
             return letter;
-        })
+        }).join(''))
         // console.log('make Small sarf --- ', result, rootArr, result.map(ch=>ch.charCodeAt(0)))
         // if(obj.word === 'إِفْعَالاً'){
         //     result[2] = rootArr[2]
@@ -294,7 +284,7 @@ function makeSmallSarf(rootVerb: IVerb) {
         //     result[6] = rootArr[6]
         //     result[7] = rootArr[7]
         // }
-        return _result.join('')
+        return _result.join(',')
     })
     return active_sarf
 }

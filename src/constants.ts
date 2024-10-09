@@ -60,7 +60,7 @@ export const SMALL_SARF_I_FORMS = [
                 },
                 {
                     title: 'Va alatun minhu',
-                    word: 'مِفْعَلٌ, مَفْعَلَةٌ, مِفْعَالٌ'
+                    word: 'مِفْعَلٌ, مِفْعَلَةٌ, مِفْعَالٌ'
                 }
             ],
             [
@@ -110,7 +110,7 @@ export const SMALL_SARF_I_FORMS = [
                 },
                 {
                     title: 'Va alatun minhu',
-                    word: 'مِفْتَحٌ, مَفْتَحَةٌ, مِفْتَاحٌ'
+                    word: 'مِفْتَحٌ, مِفْتَحَةٌ, مِفْتَاحٌ'
                 }
             ],
             [
@@ -160,7 +160,7 @@ export const SMALL_SARF_I_FORMS = [
                 },
                 {
                     title: 'Va alatun minhu',
-                    word: 'مِنْصَعٌ, مَنْصَعَةٌ, مِنْصَاعٌ'
+                    word: 'مِنْصَعٌ, مِنْصَعَةٌ, مِنْصَاعٌ'
                 }
             ],
         ]
@@ -215,7 +215,7 @@ export const SMALL_SARF_I_FORMS = [
                 },
                 {
                     title: 'Va alatun minhu',
-                    word: 'مِفْعَلٌ, مَفْعَلَةٌ, مِفْعَالٌ'
+                    word: 'مِفْعَلٌ, مِفْعَلَةٌ, مِفْعَالٌ'
                 }
             ],
             [
@@ -265,7 +265,7 @@ export const SMALL_SARF_I_FORMS = [
                 },
                 {
                     title: 'Va alatun minhu',
-                    word: 'مِفْعَلٌ, مَفْعَلَةٌ, مِفْعَالٌ'
+                    word: 'مِفْعَلٌ, مِفْعَلَةٌ, مِفْعَالٌ'
                 }
             ],
         ]
@@ -304,7 +304,7 @@ export const SMALL_SARF_I_FORMS = [
                 },
                 {
                     title: 'Va alatun minhu',
-                    word: 'مِفْعَلٌ, مَفْعَلَةٌ, مِفْعَالٌ'
+                    word: 'مِفْعَلٌ, مِفْعَلَةٌ, مِفْعَالٌ'
                 }
             ],
         ]
