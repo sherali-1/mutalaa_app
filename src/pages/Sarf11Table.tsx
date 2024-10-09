@@ -252,23 +252,26 @@ function VerbItemTable({item, index}: { item: IVerb, index: number }) {
 function makeSmallSarf(rootVerb: IVerb) {
     const rootArr = rootVerb.root.split('').filter(w => !isArabicDiacriticMark(w))
     const active_sarf = rootVerb.small_sarf_objects?.map((obj) => {
-        let ind = 0
-        const _result = (obj.word || '').split(',').map(word => word.split('').map((letter, perInd) => {
-            let startIndex = 0
+        const _result = (obj.word || '').split(',').map(word => {
+            let ind = 0
 
-            if (obj.title.includes('maf\'ul')
-                ||obj.title.includes('amr')
-                || obj.title.includes('zorf') || obj.title.includes('ozirgi') || obj.title.includes('alat')) {
-                startIndex = 1
-            } else if (obj.title.includes('nahyu')) {
-                startIndex = 5
-            }
+            return word.split('').map((letter, perInd) => {
+                let startIndex = 0
 
-            if (!isArabicDiacriticMark(letter) && perInd >= startIndex) {
-                return rootArr[ind++] || letter
-            }
-            return letter;
-        }).join(''))
+                if (obj.title.includes('maf\'ul')
+                    || obj.title.includes('amr')
+                    || obj.title.includes('zorf') || obj.title.includes('ozirgi') || obj.title.includes('alat')) {
+                    startIndex = 1
+                } else if (obj.title.includes('nahyu')) {
+                    startIndex = 5
+                }
+
+                if (!isArabicDiacriticMark(letter) && perInd >= startIndex) {
+                    return rootArr[ind++] || letter
+                }
+                return letter;
+            }).join('')
+        })
         // console.log('make Small sarf --- ', result, rootArr, result.map(ch=>ch.charCodeAt(0)))
         // if(obj.word === 'إِفْعَالاً'){
         //     result[2] = rootArr[2]
