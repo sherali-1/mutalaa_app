@@ -260,33 +260,20 @@ function makeSmallSarf(rootVerb: IVerb) {
 
                 if (obj.title.includes('maf\'ul')
                     || obj.title.includes('amr')
-                    || obj.title.includes('zorf') || obj.title.includes('ozirgi') || obj.title.includes('alat')) {
+                    || obj.title.includes('zorf') || obj.title.includes('ozirgi') || obj.title.includes('alatun')) {
                     startIndex = 1
                 } else if (obj.title.includes('nahyu')) {
                     startIndex = 5
                 }
-
+                
+                console.log('sarf per - ', obj, word, "  ,letter =",letter,"   ,perInd =",perInd,"     ,startIndex =", startIndex, "     ,inc ind++", ind, "    ,rootArr", rootArr)
                 if (!isArabicDiacriticMark(letter) && perInd >= startIndex) {
                     return rootArr[ind++] || letter
                 }
                 return letter;
             }).join('')
         })
-        // console.log('make Small sarf --- ', result, rootArr, result.map(ch=>ch.charCodeAt(0)))
-        // if(obj.word === 'إِفْعَالاً'){
-        //     result[2] = rootArr[2]
-        //     result[4] = rootArr[4]
-        //     result[7] = rootArr[6]
-        // }else if(obj.word === 'لا تَتَفَعَّلْ'){
-        //     result[5] = rootArr[2]
-        //     result[7] = rootArr[4]
-        //     result[9] = rootArr[6]
-        // }else{     
-        //     result[2] = rootArr[2]
-        //     result[4] = rootArr[4]   
-        //     result[6] = rootArr[6]
-        //     result[7] = rootArr[7]
-        // }
+        
         return _result.join(',')
     })
     return active_sarf
